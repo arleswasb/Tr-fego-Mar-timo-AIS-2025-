@@ -9,29 +9,40 @@ maritime-traffic-graph/
 └── README.md           # Documentação
 
 
-Este projeto realiza a modelagem e análise de grafos georreferenciados a partir de dados de telemetria AIS (Automatic Identification System) do banco de dados **MarineCadastre.gov** referentes ao ano de 2025.
+# Maritime Traffic Graph Analysis (AIS 2025)
 
-## 🚀 Objetivo
-Extrair trajetórias de navios (Track Lines), processar milhões de registros via Python/Kaggle e gerar um grafo no formato `.graphml` para análise avançada de redes no **Gephi**.
+Este projeto realiza a modelagem e análise de redes complexas a partir de dados de telemetria AIS (Automatic Identification System) obtidos através do **MarineCadastre.gov**. O foco é a reconstrução de rotas marítimas georreferenciadas para o ano de 2025.
 
-## 🛠️ Tecnologias Utilizadas
-- **Python 3.10+**
-- **GeoPandas & Pyogrio**: Processamento de dados espaciais de alta performance.
-- **NetworkX**: Construção e algoritmos de teoria dos grafos.
-- **Gephi**: Visualização e layout geográfico.
-- **Kaggle**: Ambiente de nuvem para processamento do dataset de 7GB.
+##  Estrutura do Repositório
 
-## 📊 Metodologia de Grafos
-- **Nós (Nodes)**: Pontos de origem e destino (Hubs/Portos) identificados via arredondamento de coordenadas (precisão de ~1.1km).
-- **Arestas (Edges)**: Movimentação de navios entre nós.
-- **Pesos (Weights)**: Frequência de tráfego e duração média das viagens.
+- **notebooks/**: Experimentos e processamento pesado realizados no Kaggle.
+- **src/**: Scripts Python reutilizáveis para carregamento de dados e construção de grafos.
+- **output/**: Arquivos `.graphml` gerados para visualização no Gephi.
+- **docs/**: Documentação, imagens de satélite e resultados das análises.
 
-## 📈 Análises Realizadas
-- [ ] Centralidade de Intermediação (Betweenness) para identificar gargalos.
-- [ ] PageRank para definir autoridade dos portos.
-- [ ] Detecção de Comunidades (Clusters logísticos).
+##  Tecnologias e Ferramentas
+- **Linguagem**: Python 3.10+
+- **Processamento**: GeoPandas, Pyogrio (leitura de alta performance).
+- **Grafos**: NetworkX (algoritmos de centralidade e métricas).
+- **Visualização**: Gephi (layout geográfico e análise visual).
+- **Ambiente**: Kaggle Kernels (processamento de datasets > 7GB).
 
-## 📄 Como utilizar
-1. Execute o notebook disponível na pasta `/notebooks` no ambiente Kaggle.
-2. Baixe o arquivo `traffic.graphml`.
-3. Importe no Gephi e utilize o plugin **GeoLayout** para visualização espacial.
+## Metodologia
+O projeto utiliza a técnica de **Coordinate Rounding** (Arredondamento de Coordenadas) para agrupar sinais de GPS em hubs logísticos (nós), permitindo a análise de fluxo entre portos e zonas de tráfego intenso.
+
+##  Como Executar
+1. Clone o repositório: `git clone https://github.com/arleswasb/maritime-traffic-graph.git`
+2. Instale as dependências: `pip install -r requirements.txt`
+3. Utilize os notebooks na pasta `/notebooks` para processar os dados do MarineCadastre.
+
+##  Identificação Acadêmica
+
+Autor: Werbert Arles de Souza Barradas
+
+Instituição: Universidade Federal do Rio Grande do Norte (UFRN)
+
+Curso: Engenharia de Computação
+
+Disciplina: Estrutura de Dados II
+
+Orientador: Prof. Dr. Ivanovich Silva
