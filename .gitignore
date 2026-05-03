@@ -1,0 +1,7 @@
+*.zip
+*.gdb/
+*.shp
+output/traffic.graphml
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
