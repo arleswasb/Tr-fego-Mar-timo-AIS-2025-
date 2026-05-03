@@ -1,5 +1,5 @@
 # Análise de Redes de Tráfego Marítimo (AIS 2025)
-
+'''
 maritime-traffic-graph/
 ├── data/               # (Não subir o ZIP de 7GB, apenas o traffic.graphml se for <25MB)
 ├── notebooks/          # O .ipynb que você está criando no Kaggle
@@ -7,7 +7,7 @@ maritime-traffic-graph/
 ├── images/             # Prints do Gephi e das análises
 ├── results/            # Arquivos CSV com métricas de centralidade
 └── README.md           # Documentação do projeto
-
+'''
 Este projeto realiza a modelagem e análise de grafos georreferenciados a partir de dados de telemetria AIS (Automatic Identification System) do banco de dados **MarineCadastre.gov** referentes ao ano de 2025.
 
 ## 🚀 Objetivo
